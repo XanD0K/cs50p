@@ -7,7 +7,7 @@ def main():
 
 
 # Use 'assert' keyword, which allows to assert that something is True. 
-# If it is, nothing's gonna happen. If something is wrong, than an AssertionError will appear on the screen
+# If it is, nothing's gonna happen. If something is wrong, than an AssertionError will appear
 def test_square():
     try:
         assert square(2) == 4
