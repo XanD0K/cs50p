@@ -13,7 +13,7 @@ def is_valid(s):
     # First 2 characters must be letters
     if not s[:2].isalpha():
         return False
-    # Only letters and numbers (exclude ponctuations, periods, spaces)
+    # Only letters and numbers (exclude punctuations, periods, spaces)
     if not s.isalnum():
         return False
     # Check for numbers
