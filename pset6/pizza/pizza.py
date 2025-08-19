@@ -9,7 +9,7 @@ def main():
     pizza = []
 
     # Checks for 2 command-line arguments and for .csv file
-    if len(sys.argv) != 2 or not sys.argv[1].endswith('.csv'):
+    if len(sys.argv) != 2 or not sys.argv[1].endswith(".csv"):
         sys.exit("Usage: python pizza.py <filename.csv>")
 
     # Check if file exists
