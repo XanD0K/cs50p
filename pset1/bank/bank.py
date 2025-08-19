@@ -1,3 +1,5 @@
+# There's a newer and improved version on 'pset5' directory
+
 greeting = input("Greeting: ").strip().lower()
 
 if greeting.startswith("hello"):

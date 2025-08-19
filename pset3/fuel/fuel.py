@@ -1,3 +1,5 @@
+# There's a newer and improved version on 'pset5' directory
+
 def main():
     numer, denom = get_fraction()
     fuel = round((numer / denom) * 100)        

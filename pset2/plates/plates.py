@@ -1,3 +1,5 @@
+# There's a newer and improved version on 'pset5' directory
+
 def main():
     plate = input("Plate: ")
     if is_valid(plate):
