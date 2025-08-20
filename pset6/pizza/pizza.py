@@ -6,8 +6,6 @@ import sys
 
 
 def main():
-    pizza = []
-
     # Checks for 2 command-line arguments and for .csv file
     if len(sys.argv) != 2 or not sys.argv[1].endswith(".csv"):
         sys.exit("Usage: python pizza.py <filename.csv>")
@@ -20,14 +18,12 @@ def main():
     try:
         with file_path.open() as file:
             reader = csv.DictReader(file)
-            for row in reader:
-                pizza.append(row)
+            # Removed the list to work directly with 'reader'
+            print(tabulate(reader, headers="keys", tablefmt="grid"))
 
     # Already checking file before this try-except block. Don't need 'FileNotFoundError' exception
     except (PermissionError, csv.Error) as e:
         sys.exit(f"Error reading file {sys.argv[1]}: {e} ")
-
-    print(tabulate(pizza, headers="keys", tablefmt="grid"))
 
 
 if __name__ == "__main__":
