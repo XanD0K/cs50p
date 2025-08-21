@@ -11,8 +11,8 @@ def get_student():
 
     return name, house 
     # That returns a tupple.
-    # Tupples are immutable, which means you can't change it's value!
-    # If want to change, return it as a list (e.g. return [name, house])
+    # Tupples are immutable, which means you can't change its value!
+    # If we want to change its value, return it as a list (e.g. return [name, house])
 
 
 if __name__ == "__main__":
