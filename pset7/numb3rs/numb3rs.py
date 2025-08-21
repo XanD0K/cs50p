@@ -20,3 +20,6 @@ def validate(ip):
 
 if __name__ == "__main__":
     main()
+
+# TODO: apply other Ip's constraints
+# TODO: check for public/private Ip
