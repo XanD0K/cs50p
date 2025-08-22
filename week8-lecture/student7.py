@@ -6,6 +6,8 @@ class Student:
     def __str__(self):
          return f"{self.name} from {self.house}"   
 
+    # Use validation in setters with @property when attributes might be modified after creationg and need consistent validation
+    # Use the previous validation (inside __init__) for attributes that are set once and rarely change (or simple classes)
     @property
     def name(self):
         return self._name

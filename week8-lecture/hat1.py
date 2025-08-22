@@ -16,3 +16,4 @@ class Hat:
 Hat.sort("Harry")
 
 # That's the same logic of acessing a function (e.g. strip(), lower()) from the 'str' class
+# It's a function that belongs to the class and that can access/modify class-level data or create instances

@@ -34,6 +34,10 @@ class Student:
     # @<property_name>.setter defines the setter
     # Can't have variable 'house' and function 'house', so changed to _house
     # That way the instance variable is '_house' and the property is 'house'
+    # '@property def house' lets access sudent.house, like an attribute
+    # The actual data is stored in a separate attribute, in this case, self._house
+    # Use double underscore instead to make it Private, by triggering Python's name mangling
+    # Just like single underscore, double underscore doesn't prevent acessing from outside of the class. "Python trusts developers to follow conventions"
 
 def main():
     student = get_student()

@@ -1,5 +1,6 @@
 class Student:
     # Method used to initialize the contens of an object from a class
+    # The __init__ method is also called "constructor"
     def __init__(self, name, house):
         self.name = name
         self.house = house

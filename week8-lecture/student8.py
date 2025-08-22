@@ -32,7 +32,7 @@ class Student:
 def main():
     student = get_student()    
     # Python focuses on conventions, not hard constraints
-    # You can decide if an instance variables will be public, accessible in code, protected, or private
+    # You can decide if an instance variables will be public (accessible in code), protected, or private
     # The convention is: if an instance variable starts with an underscore, don't touch it
     # But nothing prevents to change that value:
     student._house = "Number Four, Privet Drive"

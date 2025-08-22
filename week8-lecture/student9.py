@@ -30,3 +30,18 @@ if __name__ == "__main__":
 
 # There are other types of methods in Python's classes
 # They tend to be called "statis methods", and they have the @staticmethod decorator
+# Use @staticmethod for methods that don’t need access to self or cls
+# A @staticmethod is a method that belongs to a class but doesn’t receive self or cls as an argument
+# It’s a regular function scoped to the class’s namespace, used for utility functions related to the class
+""" e.g.
+class Student:
+    @staticmethod
+    def is_valid_house(house):
+        return house in ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"]
+
+class Student:
+    @staticmethod
+    def format_name(name):
+        return name.title()  # Capitalizes name      
+"""
+
