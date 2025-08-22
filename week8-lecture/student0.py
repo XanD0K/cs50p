@@ -1,6 +1,6 @@
 def main():
     student = get_student()
-    if student[0] == "Padma":
+    if student[0] == "Padma": # This if block won't work with tuple
         student[1] = "Ravenclaw"
     print(f"{student[0]} from {student[1]}")
 
@@ -12,7 +12,7 @@ def get_student():
     return name, house 
     # That returns a tupple.
     # Tupples are immutable, which means you can't change its value!
-    # If we want to change its value, return it as a list (e.g. return [name, house])
+    # If you want to change its value, return it as a list or as a dictionary (e.g. return [name, house])
 
 
 if __name__ == "__main__":
