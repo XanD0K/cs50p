@@ -9,7 +9,7 @@ def main():
 
     birth_date = input("Date of Birth: ").strip()
     if not validate_date(birth_date):
-        sys.exit("Date not valid! Format: YYYY-MM-DD")
+        sys.exit("Invalid date! Format: YYYY-MM-DD")
 
     minutes = minutes_since_birth(birth_date)
     if not minutes:
@@ -20,7 +20,9 @@ def main():
 
 def validate_date(d):
     try:
-        datetime.strptime(d, "%Y-%m-%d")
+        birth = datetime.strptime(d, "%Y-%m-%d")
+        if birth.date() > date.today():
+            return False
         return True
     except ValueError:
         return False
@@ -40,3 +42,4 @@ if __name__ == "__main__":
 
 
 # TODO: accept more date formats
+# TODO: accept time → use total_seconds()

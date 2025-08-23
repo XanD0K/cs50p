@@ -1,36 +1,34 @@
 from datetime import date, datetime
-
 import inflect
 import sys
 
-
-class MinutesBorn:
-    def __init__(self, birth_date):
-        self.p = inflect.engine()
-        self.birth_date = birth_date
-        if not self._validate_date():
-            sys.exit("Date not valid! Format: YYYY-MM-DD")
-    
-    def _validate_date(self):
-        try:
-            datetime.strptime(self.birth_date, "%Y-%m-%d")
-            return True
-        except ValueError:
-            return False
-        
-    def minutes_since_birth(self):
-        try:
-            _birth_date = date.fromisoformat(self.birth_date)
-            minutes = (date.today() - _birth_date).days * 24 * 60
-            return f"{self.p.number_to_words(minutes, andword='').capitalize()} minutes"
-        except ValueError:
-            sys.exit("Invalid date!")
-
-        
+p = inflect.engine()
 
 def main():
-    birth_date = input("Date of Birth: ").strip()
-    print(MinutesBorn(birth_date).minutes_since_birth())
+    birth_input = input("Date of Birth: ").strip()
+    birth = parse_birth_date(birth_input)
+    if birth is None:
+        sys.exit("Invalid date! Format: YYYY-MM-DD")
+
+    minutes = minutes_between(birth, date.today())
+    words = p.number_to_words(minutes, andword="")
+    print(f"{words.capitalize()} minutes")
+
+
+# Parse a date string YYYY-MM-DD into a date, or return None on error or future date
+def parse_birth_date(d: str):
+    try:
+        birth = datetime.strptime(d, "%Y-%m-%d").date()
+    except ValueError:
+        return None
+    return birth if birth <= date.today() else None
+
+
+# Return number of minutes between two dates (assumed at midnight)
+def minutes_between(start_date, end_date):
+    start_dt = datetime.combine(start_date, datetime.min.time())
+    end_dt = datetime.combine(end_date, datetime.min.time())
+    return int((end_dt - start_dt).total_seconds() / 60)
 
 
 if __name__ == "__main__":
