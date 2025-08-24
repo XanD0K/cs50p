@@ -1,4 +1,4 @@
-# Filters out duplicate houses using loop
+# Filters out duplicate houses using loop in a list
 
 students = [
     {"name": "Hermione", "house": "Gryffindor"},
