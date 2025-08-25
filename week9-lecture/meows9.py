@@ -1,11 +1,15 @@
-# Adds docstring to function.
+# Adds description, help
+# It's conventional to run a program with the special ragument -h or --help
+# It will show usage information
 
 
-def meow(n):
-    """Meow n times."""
-    return "meow\n" * n
+import argparse
 
+# Adds description to the program
+parser = argparse.ArgumentParser(description="Meow like a cat")
+# Adds description to the -n flag
+parser.add_argument("-n", help="number of times to meow")
+args = parser.parse_args()
 
-number = int(input("Number: "))
-meows = meow(number)
-print(meows, end="")
+for _ in range(int(args.n)):
+    print("meow")

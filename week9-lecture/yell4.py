@@ -6,7 +6,7 @@ def main():
 
 
 def yell(*words):
-    uppercased = [arg.upper() for arg in words]
+    uppercased = [word.upper() for word in words]
     print(*uppercased)
 
 

@@ -1,10 +1,16 @@
-# Success
+# To prevent overchecking, when program has multiple flags, we can use third-parties libraries
+# 'argparse' handles the parsing, the analysis of command line arguments
 
 
-def meow(n: int) -> str:
-    return "meow\n" * n
+import argparse
 
 
-number: int = int(input("Number: "))
-meows: str = meow(number)
-print(meows, end="")
+parser = argparse.ArgumentParser()
+# Adds -n as a command line argument
+parser.add_argument("-n")
+# Parse the command line arguments
+# It automatically imports 'sys' library
+args = parser.parse_args()
+
+for _ in range(int(args.n)):
+    print("meow")

@@ -1,10 +1,12 @@
-# Indexes into list
-
-
 def total(galleons, sickles, knuts):
     return (galleons * 17 + sickles) * 29 + knuts
 
 
-coins = [100, 50, 25]
+# Indexes into a dict
+coins = {"galleons": 100, "sickles": 50, "knuts": 25}
+print(total(coins["galleons"], coins["sickles"], coins["knuts"]), "Knuts", end="\n\n")
 
-print(total(coins[0], coins[1], coins[2]), "Knuts")
+
+# Dict unpack
+print(total(**coins), "Knuts")
+# It unpackles like: galleons=100, sickles=50, knuts=25

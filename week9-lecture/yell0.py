@@ -5,8 +5,8 @@ def main():
     yell("This is CS50")
 
 
-def yell(word):
-    print(word.upper())
+def yell(text):
+    print(text.upper())
 
 
 if __name__ == "__main__":
