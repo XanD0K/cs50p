@@ -1,4 +1,4 @@
-# Uses dictionary comprehension instead
+# Uses dictionary comprehension to create a big dict
 
 students = ["Hermione", "Harry", "Ron"]
 

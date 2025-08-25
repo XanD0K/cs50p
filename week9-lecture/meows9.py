@@ -5,6 +5,7 @@
 
 import argparse
 
+
 # Adds description to the program
 parser = argparse.ArgumentParser(description="Meow like a cat")
 # Adds description to the -n flag

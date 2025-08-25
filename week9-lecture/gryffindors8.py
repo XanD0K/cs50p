@@ -1,4 +1,4 @@
-# Uses enumerate instead
+# Uses enumerate() instead
 
 students = ["Hermione", "Harry", "Ron"]
 

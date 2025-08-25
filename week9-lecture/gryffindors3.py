@@ -1,4 +1,5 @@
 # Uses filter with lambda
+# It dismisses the necessity of a function that will only be used once
 
 students = [
     {"name": "Hermione", "house": "Gryffindor"},
